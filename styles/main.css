@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+
+#container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+}
+
+#header {
+    box-sizing: border-box;
+    height: 80px;
+    width: 100%;
+    background:  rgba(0, 0, 0, 0.9);
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#header #logo {
+    color: #ffe593;
+    font-size: 50pt;
+    font-weight: 200;
+    line-height: 30px;
+    font-family: 'Ruthie', cursive;
+    align-self: center;
+    padding: 15px 20px 5px 20px;
+}
+
+
+#header #navbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex end;
+}
+
+#header #navbar #nav-items {
+    align-self: center;
+}
+
+/*------animaciones items barra de navegación-------*/
+
+.draw-border {
+    box-shadow: inset 0 0 0 2px #58cdd1;
+    color: #58afd1;
+    -webkit-transition: color 0.25s 0.0833333333s;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+}
+
+.draw-border::before, .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.draw-border::before {
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}
+
+.draw-border::after {
+    border-top-width: 2px;
+    border-right-width: 2px;
+}
+
+.draw-border:hover {
+    color: #ffe593;
+}
+
+.draw-border:hover::before, .draw-border:hover::after {
+    border-color: #cc4b51;
+    -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+
+.draw-border:hover::before {
+    -webkit-transition-delay: 0s, 0s, 0.25s;
+    transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+    -webkit-transition-delay: 0s, 0.25s, 0s;
+    transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: 500 13pt 'Handlee', cursive;
+    margin: 0px 10px;
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+}
+
+​.btn:focus {
+    outline: 2px dotted #55d7dc;
+}
+
+#btn-home{
+    width: 50px;
+    font-size: 25pt;
+    padding: 0px;
+}
+
+#main #welcome-section {
+    box-sizing: border-box;
+    background:linear-gradient(#dd9080, #df725d, #cc4b51, #7f4855, #463e50, #233e51, #17232c, #0d1114, #000000 );;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+#main #welcome-section .section-hola {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding-bottom: 30px;
+}
+
+#main #welcome-section .welcome {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+#main #welcome-section .section-hola h1 {
+    color: #ffe593;
+    font-size: 50pt;
+    font-weight: 300;
+    line-height: 30px;
+    width: 100%;
+    font-family: 'Ruthie', cursive;
+    align-self: center;
+}
+
+#main #welcome-section .section-nombre{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+#main #welcome-section .section-nombre h1 {
+    color: #ffffff;
+    font-size: 70pt;
+    font-weight: 200;
+    line-height: 30px;
+    width: 100%;
+    font-family: 'Squada One', cursive;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#main #welcome-section .section-nombre p {
+    color: #ffffff;
+    font-size: 20pt;
+    line-height: 30px;
+    border: solid 2px #58cdd1;
+    width: 100%;
+    font-family: 'Handlee', cursive;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+#main #welcome-section .photo img {
+    text-align: center;
+    max-width: 500px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px -0px rgba(70, 165, 149, 0.75);
+}
+
+#main #projects {
+    padding-top: 75px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+#main #projects .project-tile {
+    padding: 30px 0;
+}
+
+#main #projects .project-tile h2 {
+    font-size: 50pt;
+    font-weight: 100;
+    line-height: 30px;
+    border: solid 2px #58cdd1;
+    width: 100%;
+    font-family: 'Ruthie', cursive;
+}
+
+#main #projects #corousel {
+    width: 70%;
+    box-shadow: black 10px 10px 30px;
+}
+
+#main #formacion {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    padding-top: 75px;
+}
+
+#main #formacion .project-tile {
+    padding: 30px 0;
+}
+
+#main #formacion .project-tile h2 {
+    font-size: 50pt;
+    font-weight: 100;
+    line-height: 30px;
+    border: solid 2px #58cdd1;
+    width: 100%;
+    font-family: 'Ruthie', cursive;
+}
+
+#main #formacion .informacion {
+    width: 70%;
+    box-shadow: black 10px 10px 30px;
+}
+
+#main #formacion .informacion h3, p{
+    font-family: 'Handlee', cursive;
+    text-align: center;
+    padding: 20px 5px;
+}
+
+#main #formacion .informacion .div-imagen{
+    text-align: center;
+}
+
+#main #formacion .informacion .div-imagen .fig-informacion{
+    text-align: center;
+    width: 100%;
+}
+
+#main #formacion .informacion .div-imagen .fig-informacion img{
+    width: 90%;
+}
+
+#main #formacion .informacion .div-imagen .div-imagen-logos{
+    width: 100%;
+    text-align: center;
+}
+
+#main #formacion .informacion .div-imagen .div-imagen-logos img{
+    width: 30%;
+}
+
+
+#main #servicios {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    padding-top: 75px;
+}
+
+#main #servicios .project-tile {
+    padding: 30px 0;
+}
+
+#main #servicios .project-tile h2 {
+    font-size: 50pt;
+    font-weight: 100;
+    line-height: 30px;
+    border: solid 2px #58cdd1;
+    width: 100%;
+    font-family: 'Ruthie', cursive;
+}
+
+#main #servicios .informacion {
+    width: 70%;
+    box-shadow: black 10px 10px 30px;
+}
+
+#main #servicios .informacion .div-imagen{
+    text-align: center;
+}
+
+#main #servicios .informacion .div-imagen .fig-servicios{
+    text-align: center;
+    width: 100%;
+}
+
+#main #servicios .informacion .div-imagen .fig-servicios img{
+    width: 90%;
+}
+
+#main #servicios .informacion .div-imagen .div-imagen-logos{
+    width: 100%;
+    text-align: center;
+}
+
+
+#contacto {
+    margin-top: 75px;
+    background:rgba(0, 0, 0, 0.9);
+    color: #ffe593;
+    font-family: 'Handlee', cursive;
+    padding: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 95vh;
+}
+
+#main #contacto .project-tile {
+    padding: 30px 0;
+}
+
+#main #contacto .project-tile h2 {
+    text-align: center;
+    font-size: 50pt;
+    font-weight: 100;
+    line-height: 30px;
+    width: 100%;
+    font-family: 'Ruthie', cursive;
+}
+
+#main #contacto .work{
+    color: #ffffff;
+    font-size: 20pt;
+    line-height: 30px;
+    width: 100%;
+    font-family: 'Handlee', cursive;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+#main #contacto .email{
+    font-size: 15pt;
+    border: solid 2px #58cdd1;
+    width: 50%;
+    align-self: center;
+
+}
+
+/*------animaciones iconos-------*/
+
+.social-icons {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.social-icons li {
+    margin: 50px;
+    position: relative;
+    font-size: 30px;
+}
+
+.social-icons i {
+    color: #fff;
+    position: absolute;
+    top: 11.5px;
+    left: 11.5px;
+    transition: all 265ms ease-out;
+}
+
+.social-icons a:before {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: block;
+    background: linear-gradient(45deg, #cc4b51, #58cdd1);
+    transition: all 265ms ease-out;
+}
+
+.social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+}
+
+.social-icons a:hover i {
+    transform: scale(2.2);
+    -ms-transform: scale(2.2);
+    -webkit-transform: scale(2.2);
+    color: #cc4b51;
+    background: -webkit-linear-gradient(45deg, #cc4b51, #58cdd1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
+}
+
+footer{
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    font-size: 10pt;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@media screen and (max-width: 840px){
+
+    #logo{
+        padding: 15px 10px 5px 20px;
+    }
+    #logo h1 {
+        font-size: 20pt;
+    }
+
+    .btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font: 500 10pt 'Handlee', cursive;
+        margin: 0px 2px;
+        padding: 10px;
+        width: 70px;
+        height: 40px;
+    }
+
+}
